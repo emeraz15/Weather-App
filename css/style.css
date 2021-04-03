@@ -1,0 +1,120 @@
+.container {
+  background-image: linear-gradient(to top, #88d3ce 0%, #6e45e2 100%);
+  margin-top: 20px;
+  border-radius: 10px;
+  height: auto;
+  max-width: 600px;
+}
+
+.form-control,
+.btn {
+  margin-top: 20px;
+  color: #6e45e2;
+}
+
+#current-btn {
+  position: relative;
+  left: 40px;
+}
+.city-form {
+  margin: 0 auto;
+}
+.date {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  display: block;
+}
+.degrees {
+  display: inline;
+  font-size: medium;
+  position: relative;
+  top: -40px;
+  left: 10px;
+}
+#fahrenheit-link {
+  text-decoration: none;
+  color: white;
+}
+
+#celsius-link {
+  text-decoration: none;
+  color: white;
+}
+.current-day {
+  width: 125px;
+  padding-top: 30px;
+  position: relative;
+  left: 30px;
+}
+.current-city {
+  margin-top: 20px;
+  color: white;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+.current-temp {
+  display: inline;
+  font-size: 60px;
+  position: relative;
+  top: -20px;
+}
+h1 {
+  font-size: 24px;
+}
+.current-stats {
+  position: relative;
+  top: 60px;
+
+  left: 70px;
+  font-size: 14px;
+}
+
+.small-icons {
+  width: 15px;
+  padding: 10px 0px;
+  position: relative;
+  left: -10px;
+}
+.location {
+  display: inline;
+}
+.location-pin {
+  width: 15px;
+  position: relative;
+  bottom: 5px;
+}
+p {
+  color: white;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: lighter;
+  display: inline;
+}
+.days {
+  margin-top: 20px;
+  color: white;
+  font-family: "Montserrat Alternates", sans-serif;
+  text-align: center;
+}
+.the-week {
+  margin: 0 auto;
+}
+.day-icons {
+  width: 50px;
+  text-align: center;
+}
+
+.week-temp {
+  display: block;
+  margin-top: 20px;
+}
+footer {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #6e45e2;
+}
+.icon-attributions {
+  color: gray;
+  font-size: 10px;
+}
