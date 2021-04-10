@@ -29,16 +29,21 @@ let date = document.querySelector(".date");
 console.log(date);
 date.innerHTML = `${currentDay} ${currentMonth} ${currentDate} ${currentYear} ${hours}:${minutes}`;
 
+function search(city) {
+  let apiKey = "5d8667ee7b2450bd924cdffccf269c9a";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial`;
+
+  axios.get(`${apiUrl}&appid=${apiKey}`).then(displayTemp);
+}
+
 function updateCity(event) {
   event.preventDefault();
   let city = document.querySelector("#input-city");
   let cityname = document.querySelector(".location");
   cityname.innerHTML = `${city.value}`;
-  let apiKey = "5d8667ee7b2450bd924cdffccf269c9a";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&units=imperial`;
-
-  axios.get(`${apiUrl}&appid=${apiKey}`).then(displayTemp);
+  search(city.value);
 }
+search("Chicago");
 
 let cityform = document.querySelector("#city-form");
 cityform.addEventListener("submit", updateCity);
