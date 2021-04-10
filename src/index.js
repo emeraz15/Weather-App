@@ -26,7 +26,6 @@ if (minutes < 10) {
 }
 
 let date = document.querySelector(".date");
-console.log(date);
 date.innerHTML = `${currentDay} ${currentMonth} ${currentDate} ${currentYear} ${hours}:${minutes}`;
 
 function search(city) {
@@ -48,7 +47,8 @@ search("Chicago");
 let cityform = document.querySelector("#city-form");
 cityform.addEventListener("submit", updateCity);
 
-function Celsius() {
+function Celsius(event) {
+  event.preventDefault();
   let degree = document.querySelector(".current-temp");
   let temperature = degree.innerHTML;
   degree.innerHTML = Math.round(((temperature - 32) * 5) / 9);
@@ -57,7 +57,8 @@ function Celsius() {
 let celsius = document.querySelector("#celsius-link");
 celsius.addEventListener("click", Celsius);
 
-function Fahrenheit() {
+function Fahrenheit(event) {
+  event.preventDefault();
   let degree = document.querySelector(".current-temp");
   let temperature = degree.innerHTML;
   degree.innerHTML = Math.round((temperature * 9) / 5 + 32);
