@@ -47,11 +47,12 @@ search("Chicago");
 let cityform = document.querySelector("#city-form");
 cityform.addEventListener("submit", updateCity);
 
+let fahrenheitTemperature = null;
+
 function Celsius(event) {
   event.preventDefault();
   let degree = document.querySelector(".current-temp");
-  let temperature = degree.innerHTML;
-  degree.innerHTML = Math.round(((temperature - 32) * 5) / 9);
+  degree.innerHTML = Math.round(((fahrenheitTemperature - 32) * 5) / 9);
 }
 
 let celsius = document.querySelector("#celsius-link");
@@ -60,14 +61,14 @@ celsius.addEventListener("click", Celsius);
 function Fahrenheit(event) {
   event.preventDefault();
   let degree = document.querySelector(".current-temp");
-  let temperature = degree.innerHTML;
-  degree.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  degree.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", Fahrenheit);
 
 function displayTemp(response) {
+  fahrenheitTemperature = response.data.main.temp;
   let temperature = Math.round(response.data.main.temp);
   console.log(response);
   console.log(temperature);
