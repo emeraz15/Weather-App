@@ -113,8 +113,6 @@ function getForecast(coordinates) {
 function displayTemp(response) {
   fahrenheitTemperature = response.data.main.temp;
   let temperature = Math.round(response.data.main.temp);
-  console.log(response);
-  console.log(temperature);
   let degree = document.querySelector(".current-temp");
   degree.innerHTML = `${temperature}`;
   let humidity = Math.round(response.data.main.humidity);
