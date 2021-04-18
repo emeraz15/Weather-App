@@ -107,6 +107,11 @@ p {
   display: block;
   margin-top: 20px;
 }
+
+.max-temp {
+  font-weight: bold;
+}
+
 footer {
   text-align: center;
   font-size: 12px;

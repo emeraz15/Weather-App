@@ -43,6 +43,7 @@ function updateCity(event) {
   search(city.value);
 }
 search("Chicago");
+displayForecast();
 
 let cityform = document.querySelector("#city-form");
 cityform.addEventListener("submit", updateCity);
@@ -66,6 +67,29 @@ function Fahrenheit(event) {
 
 let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", Fahrenheit);
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thur", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+
+        <div class="col-2 days">
+          <h6>${day}</h6>
+          <img src="images/sun-cloud.png" alt="sun-cloud" class="day-icons" />
+          <span class="max-temp">61°</span> / <span class="low-temp">52°</span>
+        </div>
+    
+      `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function displayTemp(response) {
   fahrenheitTemperature = response.data.main.temp;
