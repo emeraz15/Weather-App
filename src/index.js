@@ -138,12 +138,9 @@ function displayCurrentcity(response) {
 
 function showPosition(position) {
   let latitude = position.coords.latitude;
-  console.log(latitude);
   let longitude = position.coords.longitude;
-  console.log(longitude);
   let apiKey = "5d8667ee7b2450bd924cdffccf269c9a";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
-  console.log(apiUrl);
   axios.get(`${apiUrl}`).then(displayTemp);
   axios.get(`${apiUrl}`).then(displayCurrentcity);
 }
